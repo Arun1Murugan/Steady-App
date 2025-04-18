@@ -8,17 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack(path: $path) {
+            HomeView()
+                .toolbar(content: {
+                    Button(action: {
+                        path.append(Route.more)
+                    }, label: {
+                        imageView
+                    })
+                })
+                .navigationDestination(for: Route.self) { value in
+                    switch value {
+                    case .more:
+                        MoreView(path: $path)
+                    case .history:
+                        HistoryView()
+                    case .notes:
+                        Text("Notes")
+                    case .advanced(let id):
+                        Text("\(id)")
+                    }
+                }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+}
+
+extension ContentView {
+    private var imageView: some View {
+        Image(systemName: "circle.grid.2x2.fill")
+            .renderingMode(.template)
+            .resizable()
+            .foregroundStyle(Color.gray)
+            .scaledToFit()
+            .frame(width: 30, height: 30, alignment: .center)
+    }
 }

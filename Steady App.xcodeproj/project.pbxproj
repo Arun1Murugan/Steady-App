@@ -14,6 +14,9 @@
 		349B83992DB29C2E00DEA926 /* Steady_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83982DB29C2E00DEA926 /* Steady_AppTests.swift */; };
 		349B83A32DB29C2E00DEA926 /* Steady_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83A22DB29C2E00DEA926 /* Steady_AppUITests.swift */; };
 		349B83A52DB29C2E00DEA926 /* Steady_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83A42DB29C2E00DEA926 /* Steady_AppUITestsLaunchTests.swift */; };
+		349B83B52DB2A51700DEA926 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83B42DB2A51700DEA926 /* DataManager.swift */; };
+		349B83B72DB2A55700DEA926 /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83B62DB2A55700DEA926 /* CheckItem.swift */; };
+		349B83B92DB2A56C00DEA926 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349B83B82DB2A56C00DEA926 /* ChecklistViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		349B839E2DB29C2E00DEA926 /* Steady AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Steady AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		349B83A22DB29C2E00DEA926 /* Steady_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steady_AppUITests.swift; sourceTree = "<group>"; };
 		349B83A42DB29C2E00DEA926 /* Steady_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steady_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		349B83B42DB2A51700DEA926 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		349B83B62DB2A55700DEA926 /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
+		349B83B82DB2A56C00DEA926 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				349B83872DB29C2C00DEA926 /* Steady_AppApp.swift */,
-				349B83892DB29C2C00DEA926 /* ContentView.swift */,
+				349B83B12DB2A4D900DEA926 /* Model */,
+				349B83B32DB2A4F200DEA926 /* View */,
+				349B83B22DB2A4DF00DEA926 /* ViewModel */,
 				349B838B2DB29C2E00DEA926 /* Assets.xcassets */,
 				349B838D2DB29C2E00DEA926 /* Preview Content */,
 			);
@@ -125,6 +133,31 @@
 				349B83A42DB29C2E00DEA926 /* Steady_AppUITestsLaunchTests.swift */,
 			);
 			path = "Steady AppUITests";
+			sourceTree = "<group>";
+		};
+		349B83B12DB2A4D900DEA926 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				349B83B62DB2A55700DEA926 /* CheckItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		349B83B22DB2A4DF00DEA926 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				349B83B42DB2A51700DEA926 /* DataManager.swift */,
+				349B83B82DB2A56C00DEA926 /* ChecklistViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		349B83B32DB2A4F200DEA926 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				349B83892DB29C2C00DEA926 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				349B838A2DB29C2C00DEA926 /* ContentView.swift in Sources */,
+				349B83B52DB2A51700DEA926 /* DataManager.swift in Sources */,
 				349B83882DB29C2C00DEA926 /* Steady_AppApp.swift in Sources */,
+				349B83B72DB2A55700DEA926 /* CheckItem.swift in Sources */,
+				349B83B92DB2A56C00DEA926 /* ChecklistViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct CheckItem: Identifiable {
+    let id = UUID()
+    let title: String
+    var isDone: Bool = false
+}
